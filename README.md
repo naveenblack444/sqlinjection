@@ -102,6 +102,7 @@ sudo /etc/init.d/apache2 reload
 Refresh the page then clicking on the Reset DB menu option to reset the Mutillidae database [Figure ]. Click OK when prompted.
 ##  OUTPUT
 
+<img width="1045" height="219" alt="image" src="https://github.com/user-attachments/assets/b1b00eae-024c-446a-bc1e-55b4b4a65958" />
 
 
 
@@ -111,6 +112,7 @@ Alright. Now is time to test if we managed to fix the database issue. Go ahead a
 
  The Mutillidae database error no longer appears 
 # OUTPUT
+<img width="1038" height="386" alt="{7CC834CE-6793-4B07-8D53-901D843DF1D2}" src="https://github.com/user-attachments/assets/4c09d6f0-17e8-4533-a855-0998d0a1c95e" />
 
 
 
