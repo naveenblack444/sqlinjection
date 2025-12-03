@@ -179,7 +179,8 @@ As given in the screenshot below columns 2,3,4 are usable in which we can substi
 
 ![Alt text](img/10.png)
 
-<img width="811" height="104" alt="{F6DC1EA4-D7F3-40C9-831E-8DFEF1055CD0}" src="https://github.com/user-attachments/assets/ad5325f8-ef8a-4914-82ef-72f99402b03a" />
+<img width="1630" height="299" alt="{513549B9-3BA2-49C3-81B2-47CD30585451}" src="https://github.com/user-attachments/assets/ebc38bb4-26c3-409d-a443-ea6a82ef8035" />
+
 
 
 
@@ -199,7 +200,7 @@ union select 1,table_name,null,null,5 from information_schema.tables where table
 
 
 ![Alt text](img/10.png)
-<img width="917" height="233" alt="{D87C9058-74B9-40A9-B4D6-15B8FFF60FFB}" src="https://github.com/user-attachments/assets/d7d58d7f-ecf7-4a06-9614-c2ff0c88efbc" />
+<img width="1361" height="300" alt="{046FEEA0-1991-413E-A04D-63F846A6E1BB}" src="https://github.com/user-attachments/assets/f34867cb-7c2d-4dda-af37-9222d8cb6b93" />
 
 
 
