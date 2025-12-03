@@ -24,6 +24,8 @@ Open terminal and try execute some kali linux commands
 SQL Injection is a sort of infusion assault that makes it conceivable to execute malicious SQL statements. These statements control a database server behind a web application. Assailants can utilize SQL Injection vulnerabilities to sidestep application safety efforts. They can circumvent authentication and authorization of a page or web application and recover the content of the whole SQL database. 
 Identify IP address using ifconfig in Metasploitable2
 # OUTPUT
+![1](https://github.com/user-attachments/assets/f11935a1-9bb5-44a5-8eec-398ed29c3915)
+
 
 Use the above ip address to access the apache webserver of Metasploitable2 from kali/parrot linux. In Kali Linux use the ip address in a web browser.
 ##  OUTPUT
@@ -74,11 +76,14 @@ sudo nano /var/www/mutillidae/config.inc
 Type msfadmin when prompted for the root password. 
 Once nano opens config.inc file, look for the line $dbname = ‘metasploit’ as shown in Figure  below:
 ##  OUTPUT
+<img width="817" height="454" alt="{FD6DBF6E-F9DA-43E0-B240-40912CA88E61}" src="https://github.com/user-attachments/assets/cdf98714-105f-45c7-8ba9-a10bdbe0dc46" />
+
 
 
 Replace ‘metasploit’ with ‘owasp10’ and make sure the lines end with semicolon ; as shown in Figure
 ##  OUTPUT
 
+<img width="816" height="445" alt="{7E11C84C-80D7-4E5A-BC1D-639530FAC203}" src="https://github.com/user-attachments/assets/91cd3f39-f9d1-4e1c-beb9-3456cb1f2ea0" />
 
 
 
@@ -89,6 +94,7 @@ To restart Apache, type the following command in the terminal. Alternatively, yo
 sudo /etc/init.d/apache2 reload
 ##  OUTPUT
 
+<img width="815" height="97" alt="{B1B6E301-5B26-40F7-BFA7-BECE0F5883B1}" src="https://github.com/user-attachments/assets/7ba49990-1981-406c-812b-13a378f3c206" />
 
 
 
@@ -130,6 +136,7 @@ After logging out, Now choose the menu as shown below:
 From this point, all our attack vectors will be performed in the URL section of the page using the Union-Based technique.There are two different ways to discover how many columns are selected by the original query. The first is to infuse an “ORDER BY” statement indicating a column number. Given the column number specified is higher than the number of columns in the “SELECT” statement, an error will be returned.
 ##  OUTPUT
 
+<img width="821" height="613" alt="{CB2C380F-1857-4A50-BE0A-9B874D6FEA46}" src="https://github.com/user-attachments/assets/d918e7ef-adb1-43aa-b196-e0aceb246f73" />
 
 
 Since we do not know the number of columns, we start at 1. To find the exact amount of columns, the number is incremented until an error related to the “ORDER BY” clause is returned. In this example, we incremented it to 6 and received an error message, so it means that the number of columns is lower than 6.
@@ -137,18 +144,21 @@ Since we do not know the number of columns, we start at 1. To find the exact amo
 The browser url of this info page need to be modified with the url as below:
 ##  OUTPUT
 
+<img width="818" height="582" alt="{C0721B3F-1E9B-43BB-86C7-FEB9D2132BC0}" src="https://github.com/user-attachments/assets/442c9c01-48a7-4627-a0ce-c086ba0e9a6f" />
 
 
 
 After adding the order by 6 into the existing url , the following error statement will be obtained:
 ##  OUTPUT
 
+<img width="819" height="595" alt="{BDFA56C4-5A37-4A04-A9D9-42C52E9F45DB}" src="https://github.com/user-attachments/assets/22e3b908-40ea-4d35-ac7b-0bf0efc2b652" />
 
 
 
 When we ordered by 5, it worked and displayed some information. It means there are five columns that we can work with. Following screenshot shows that the url modified to have statement added with ordered by 5 replacing 6.
 # OUTPUT
 
+<img width="814" height="578" alt="{99B07BC3-30CC-4F70-846C-A7F8D9AD61C2}" src="https://github.com/user-attachments/assets/87ab5613-709f-4e0e-9172-f8397c727b6f" />
 
 
 
@@ -161,12 +171,13 @@ When we ordered by 5, it worked and displayed some information. It means there a
 Instead of using the "order by" option, let’s use the "union select" option and provide all five columns. Ex: (union select 1,2,3,4,5).
 ##  OUTPUT
 
+<img width="811" height="454" alt="{68D75BBE-8CC9-4BCE-9F17-FA185C55F014}" src="https://github.com/user-attachments/assets/c9f612fa-0a2d-431d-8886-f990ccfa7d25" />
 
 
 As given in the screenshot below columns 2,3,4 are usable in which we can substitute any sql commands to extract necessary information.
 ##  OUTPUT
 
-
+![Alt text](img/10.png)
 
 
 
