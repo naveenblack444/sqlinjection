@@ -23,30 +23,30 @@ Open terminal and try execute some kali linux commands
 
 SQL Injection is a sort of infusion assault that makes it conceivable to execute malicious SQL statements. These statements control a database server behind a web application. Assailants can utilize SQL Injection vulnerabilities to sidestep application safety efforts. They can circumvent authentication and authorization of a page or web application and recover the content of the whole SQL database. 
 Identify IP address using ifconfig in Metasploitable2
-#OUTPUT
+# OUTPUT
 
 Use the above ip address to access the apache webserver of Metasploitable2 from kali/parrot linux. In Kali Linux use the ip address in a web browser.
 ##  OUTPUT
-
+![Alt text](img/2.png)
 
 Select Multidae from the menu listed as shown above. The page is displayed as below:
 ##  OUTPUT
-
+![Alt text](img/3.png)
 
 
 Click on the menu Login/Register and register for an account
 ##  OUTPUT
-
+![Alt text](img/4.png)
 
 
 Click on the link “Please register here”
 ##  OUTPUT
-
-
+![Alt text](img/5.png)
+![Alt text](img/6.png)
 
 Click on “Create Account” to display the following page:
 ##  OUTPUT
-
+![Alt text](img/7.png)
 
 The login structure we will use in our examples is straightforward. It contains two input fields (username and password), which are both vulnerable. The back-end content creates a query to approve the username and secret key given by the client. Here is an outline of the page rationale:
 
@@ -54,12 +54,12 @@ The login structure we will use in our examples is straightforward. It contains 
 ($query = “SELECT * FROM users WHERE username=’$_POST[username]’ AND password=’$_POST[password]’“;).
  For the username put “ganesh” or “anything” and for the password put (anything’ or ‘1’=’1) or (admin’ or ‘1’=’1) then try to log in, and you’ll be presented with an admin login page.
 ##  OUTPUT
-
+![Alt text](img/7.png)
 
 
 Click “Login”. The logged in page will show as below:
 ##  OUTPUT
-
+![Alt text](img/8.png)
 
 
 If error faced in registration follow the following steps in metasploitable 2:
@@ -104,17 +104,17 @@ Refresh the page then clicking on the Reset DB menu option to reset the Mutillid
 Alright. Now is time to test if we managed to fix the database issue. Go ahead and register a new account on the Mutillidae webpage.
 
  The Mutillidae database error no longer appears 
-#OUTPUT
+# OUTPUT
 
 
 
 Now after logging out you will see the login page. In the login page give ganesh’ # (myusername). You can see the page now enters into the administrator page as before when giving the password.
-#OUTPUT
-
+# OUTPUT
+![Alt text](img/7.1.png)
 
 Click the login button and you will see it enter into the administrator page.
-#OUTPUT
-
+# OUTPUT
+![Alt text](img/8.png)
 
 
 ## Union-based SQL injection
@@ -124,8 +124,8 @@ we will be using the “User Info” page from Mutillidae to perform a Union-Bas
 
 After logging out, Now choose the menu as shown below:
 ##  OUTPUT
-
-
+![Alt text](img/9.png)
+![Alt text](img/10.png)
 
 From this point, all our attack vectors will be performed in the URL section of the page using the Union-Based technique.There are two different ways to discover how many columns are selected by the original query. The first is to infuse an “ORDER BY” statement indicating a column number. Given the column number specified is higher than the number of columns in the “SELECT” statement, an error will be returned.
 ##  OUTPUT
@@ -147,14 +147,14 @@ After adding the order by 6 into the existing url , the following error statemen
 
 
 When we ordered by 5, it worked and displayed some information. It means there are five columns that we can work with. Following screenshot shows that the url modified to have statement added with ordered by 5 replacing 6.
-#OUTPUT
+# OUTPUT
 
 
 
 
  As it is having 5 columns the query worked fine and it provides the correct result
 ##  OUTPUT
-
+![Alt text](img/10.png)
 
 
 
